@@ -50,6 +50,7 @@ def main():
     router = LXMF.LXMRouter(storagepath="./lxmf_storage")
     os.makedirs("./identities", exist_ok=True)
     KEY_PATH = "./identities/identity.LXMF"
+    os.makedirs("./downloads", exist_ok=True)
 
     if os.path.exists(KEY_PATH):
         my_identity = RNS.Identity.from_file(KEY_PATH)
